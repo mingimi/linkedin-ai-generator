@@ -80,7 +80,7 @@ if st.button("✨ Generate LinkedIn Post"):
                 hashtags
             )
 
-                st.success("Post Generated!")
+        st.success("Post Generated!")
 
         st.subheader("Generated LinkedIn Post")
 
@@ -93,7 +93,7 @@ if st.button("✨ Generate LinkedIn Post"):
         st.markdown("---")
 
         st.download_button(
-            "📥 Download Post",
+            label="📥 Download Post",
             data=post,
             file_name="linkedin_post.txt",
             mime="text/plain"
