@@ -92,7 +92,7 @@ st.info(post)
 
 st.markdown("---")
 
-        st.download_button(
+st.download_button(
             "📥 Download Post",
             data=post,
             file_name="linkedin_post.txt",
