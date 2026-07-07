@@ -8,8 +8,13 @@ st.set_page_config(
 )
 
 # -------------------- Header --------------------
-st.title("🚀 LinkedIn AI Content Generator")
-st.markdown("Generate professional LinkedIn posts using Generative AI.")
+st.markdown("""
+# 🚀 LinkedIn AI Content Generator
+
+### Create high-quality LinkedIn posts powered by **Google Gemini AI**
+
+Generate engaging, professional, and audience-specific content in seconds.
+""")
 
 # -------------------- Sidebar --------------------
 st.sidebar.title("⚙️ Settings")
@@ -79,7 +84,13 @@ if st.button("✨ Generate LinkedIn Post"):
 
         st.subheader("Generated LinkedIn Post")
 
-        st.write(post)
+        st.markdown("---")
+
+st.markdown("## ✨ AI Generated LinkedIn Post")
+
+st.info(post)
+
+st.markdown("---")
 
         st.download_button(
             "📥 Download Post",
