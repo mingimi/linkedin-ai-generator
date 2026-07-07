@@ -1,7 +1,9 @@
 from google import genai
 import streamlit as st
 
-# Initialize Gemini Client
+st.write("Secret exists:", "GEMINI_API_KEY" in st.secrets)
+st.write("Secret length:", len(st.secrets["GEMINI_API_KEY"]))
+
 client = genai.Client(
     api_key=st.secrets["GEMINI_API_KEY"]
 )
