@@ -1,13 +1,19 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyC7kClOfl-9dvQY8lfxYAkidUYypgpk2Z8")
+# Paste your Gemini API Key here temporarily
+genai.configure(api_key="PASTE_YOUR_GEMINI_API_KEY_HERE")
+
 model = genai.GenerativeModel("gemini-2.5-flash")
+
+
 def generate_post(topic, industry, audience, tone, length, emojis, hashtags):
 
     prompt = f"""
-You are an expert LinkedIn Content Creator.
+You are one of the world's best LinkedIn content creators.
 
 Generate ONE highly engaging LinkedIn post.
+
+Requirements:
 
 Topic: {topic}
 
@@ -19,15 +25,23 @@ Tone: {tone}
 
 Length: {length}
 
-Include Emojis: {emojis}
+Use Emojis: {emojis}
 
-Include Hashtags: {hashtags}
+Use Hashtags: {hashtags}
 
-Structure:
-1. Attention-grabbing hook
-2. Valuable insights
-3. Call to action
-4. Relevant hashtags
+Output Format:
+
+🚀 Hook
+
+Body
+
+Key Takeaways
+
+Call To Action
+
+Relevant Hashtags
+
+Make it look like a viral LinkedIn post.
 """
 
     response = model.generate_content(prompt)
